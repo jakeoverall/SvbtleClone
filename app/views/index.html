@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="app">
+<head>
+    <title>Svbtle</title>
+    <link href="../style/site.css" rel="stylesheet" />
+    <script src="../../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <link href="../../bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <script src="../../bower_components/angular/angular.js"></script>
+    <script src="../scripts/app.js"></script>
+</head>
+    <body ng-controller="linksCtrl">
+        <div class="navbar"></div>
+        <ul ng-repeat="link in internalLinks">
+            <li><a class="{{link.class}}"ng-href="{{link.link}}">{{link.name}}</a></li>
+        </ul>
+        <ul ng-repeat="link in externalLinks">
+            <li><a class="{{link.class}}" ng-href="http://{{link.link}}">{{link.name}}</a></li>
+        </ul>
+    </body>
+</html>
