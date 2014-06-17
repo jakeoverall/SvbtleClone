@@ -1,0 +1,13 @@
+﻿<div class="col-lg-1 navbar" ng-controller="linksCtrl">
+    <h1 class="logo"><a href="index.html"></a></h1>
+    <ul class="leftNav">
+        <li ng-repeat="link in internalLinks">
+            <a ng-href="{{link.link}}">{{link.name}}</a>
+        </li>
+    </ul>
+    <ul class="leftNav">
+        <li ng-repeat="link in externalLinks">
+            <a ng-href="http://{{link.link}}">{{link.name}}</a>
+        </li>
+    </ul>
+</div>

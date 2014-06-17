@@ -28,28 +28,69 @@ app.controller('articlesCtrl', ['$scope', function ($scope) {
     };
 }]);
 
-$(function () {
-    var menu = $('#menu');
-    var navBar = $('#rightNavBar');
-    var menuButton = $('#rightNavMenuButton');
-    var buttonIcon = $('#navMenuIcon');
-    var menuOpen = false;
-    var navText = $("#navText");
-    menuButton.on('mousedown', function (e) {
-        if (!menuOpen) {
-            e.preventDefault();
-            menuOpen = true;
-            navText.addClass('hidden');
-            navBar.css({ 'width': '150px' });
-            buttonIcon.addClass('glyphicon-remove').removeClass('glyphicon-chevron-down');
-            menu.removeClass('hidden');
-        } else {
-            e.preventDefault();
-            menuOpen = false;
-            navBar.css({ 'width': '55px' });
-            navText.removeClass('hidden');
-            buttonIcon.addClass('glyphicon-chevron-down').removeClass('glyphicon-remove');
-            menu.addClass('hidden');
-        }
-    });
+app.directive('leftNavbar', function () {
+    return {
+        restrict: 'E',
+        templateUrl: '../views/shared/left-navbar.html'
+    };
+});
+
+app.directive('rightMenubar', function () {
+    return {
+        restrict: 'E',
+        templateUrl: '../views/shared/right-menubar.html'
+    };
+});
+
+app.directive('articles', function () {
+    return {
+        restrict: 'E',
+        templateUrl: '../views/articles/articles.html'
+    };
+});
+
+app.directive('subArticles', function () {
+    return {
+        restrict: 'E',
+        templateUrl: '../views/articles/sub-articles.html'
+    };
+});
+
+app.directive('footerLayout', function () {
+    return {
+        restrict: 'E',
+        templateUrl: '../views/shared/footer-layout.html'
+    };
+});
+
+
+$('#content').bind('DOMSubtreeModified', function (e) {
+    if (e.target.innerHTML.length > 0) {
+        $(function () {
+            var menu = $('#menu');
+            var navBar = $('#rightNavBar');
+            var menuButton = $('#rightNavMenuButton');
+            var buttonIcon = $('#navMenuIcon');
+            var menuOpen = false;
+            var navText = $("#navText");
+            menuButton.on('mousedown', function (e) {
+                if (!menuOpen) {
+                    e.preventDefault();
+                    menuOpen = true;
+                    navText.addClass('hidden');
+                    navBar.css({ 'width': '150px' });
+                    buttonIcon.addClass('glyphicon-remove').removeClass('glyphicon-chevron-down');
+                    menu.removeClass('hidden');
+                } else {
+                    e.preventDefault();
+                    menuOpen = false;
+                    navBar.css({ 'width': '55px' });
+                    navText.removeClass('hidden');
+                    buttonIcon.addClass('glyphicon-chevron-down').removeClass('glyphicon-remove');
+                    menu.addClass('hidden');
+                }
+            });
+        });
+
+    }
 });

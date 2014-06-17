@@ -77,7 +77,7 @@
     bottom: 0;
     border-right: 1px solid #eee;
     padding-right: 200px;
-    min-width: 800px;
+    min-width: 550px;
 }
 
 .pageHeader {
@@ -179,14 +179,18 @@
         text-decoration: none;
         transition-property: all;
         transition-duration: .5s;
+        padding-top: 10px;
     }
 
         .subArticles a.subArticleTitle {
-            font-size: 18px;
+            font-size: 20px;
+            padding-bottom: 0;
         }
 
         .subArticles a.subArticleAuthor {
             font-size: 14px;
+            padding-top: 5px;
+            text-transform: uppercase;
         }
 
         .subArticles a:hover {
