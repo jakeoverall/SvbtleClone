@@ -1,8 +1,9 @@
-﻿<div class="col-lg-1 navbar" ng-controller="linksCtrl">
-    <h1 class="logo"><a href="index.html"></a></h1>
+﻿<!-- must add ng-controller="linksCtrl" if not already defined -->
+<div class="col-lg-1 navbar">
+    <h1 class="logo"><a href="/SvbtleClone/app/views/index.html"></a></h1>
     <ul class="leftNav">
         <li ng-repeat="link in internalLinks">
-            <a ng-href="{{link.link}}">{{link.name}}</a>
+            <a ng-click="loadView(link.id);" ng-class="{ active:isSelected(link.id) }" ng-href="#{{link.link}}">{{link.name}}</a>
         </li>
     </ul>
     <ul class="leftNav">

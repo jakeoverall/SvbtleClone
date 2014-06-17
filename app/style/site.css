@@ -42,6 +42,15 @@
             text-decoration: none;
         }
 
+        .leftNav a:active {
+            font-weight: 700;
+            color: #000;
+            text-decoration: none;
+            background-color: salmon;
+            border-radius: 5px;
+            padding: 3px;
+        }
+
 .logo {
     position: relative;
     margin-left: 52px;
@@ -78,6 +87,7 @@
     border-right: 1px solid #eee;
     padding-right: 200px;
     min-width: 550px;
+    min-height: 550px;
 }
 
 .pageHeader {
@@ -197,10 +207,6 @@
             color: red;
             text-decoration: none;
         }
-
-
-
-
 
 #menu {
     padding-top: 35px;
@@ -360,11 +366,11 @@ footer a.links {
     }
 
     footer a.links.twitterIcon {
-        background: transparent url("../../media/images/twitterIcon.png") 0 -25px no-repeat;
+        background: transparent url("/SvbtleClone/media/images/twitterIcon.png") 0 -25px no-repeat;
     }
 
         footer a.links.twitterIcon:hover {
-            background: transparent url("../../media/images/twitterIcon.png") 0 0 no-repeat;
+            background: transparent url("/SvbtleClone/media/images/twitterIcon.png") 0 0 no-repeat;
         }
 
 

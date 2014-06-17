@@ -2,27 +2,31 @@
 <html xmlns="http://www.w3.org/1999/xhtml" ng-app="app">
 <head>
     <title>Svbtle</title>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    <link href="../style/site.css" rel="stylesheet" />
-    <link href="../../bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
-    <link rel="icon" type="image/png" href="../../media/images/favicon.ico" />
+    <!--<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>-->
+    <link href="/SvbtleClone/app/style/site.css" rel="stylesheet" />
+    <link href="/SvbtleClone/bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="/SvbtleClone/media/images/favicon.ico" />
 </head>
 <body id="content">
+    <section ng-controller="linksCtrl">
+        <!-- Left Nav Bar -->
+        <left-navbar></left-navbar>
 
-    <!-- Left Nav Bar -->
-    <left-navbar></left-navbar>
+        <!-- Mid Col Content -->
 
-    <!-- Mid Col Content -->
-    <div class="col-lg-8 content">
-        <h1 class="pageHeader">Svbtle</h1>
-        <articles></articles>
-    </div>
+        <div class="col-lg-8 content" ng-view>
+            <h1 class="pageHeader">Svbtle</h1>
+            <articles ng-show="activeView === 1"></articles>
+            <about ng-show="activeView === 2"></about>
+            <signup ng-show="activeView === 3"></signup>
+            <login ng-show="activeView === 4"></login>
+        </div>
 
-    <!-- Right Col Content -->
-    <div class="col-lg-3">
-        <sub-articles></sub-articles>
-    </div>
-
+        <!-- Right Col Content -->
+        <div class="col-lg-3">
+            <sub-articles ng-show="activeView === 1"></sub-articles>
+        </div>
+    </section>
     <!-- Right Nav Bar -->
     <right-menubar></right-menubar>
 
@@ -31,9 +35,9 @@
 
     <!-- Scripts -->
 
-    <script src="../../bower_components/jquery/dist/jquery.js"></script>
-    <script src="../../bower_components/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="../../bower_components/angular/angular.js"></script>
-    <script src="../scripts/app.js"></script>
+    <script src="/SvbtleClone/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/SvbtleClone/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="/SvbtleClone/bower_components/angular/angular.js"></script>
+    <script src="/SvbtleClone/app/scripts/app.js"></script>
 </body>
 </html>

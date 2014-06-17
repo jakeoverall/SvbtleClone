@@ -2,19 +2,30 @@
 
 app.controller('linksCtrl', ['$scope', function ($scope) {
     $scope.internalLinks = [{
+        id: 1,
         'name': 'magazine',
         'link': 'magazine'
     }, {
+        id: 2,
         'name': 'about',
         'link': 'about'
     }, {
+        id: 3,
         'name': 'sign up',
         'link': 'sign-up'
     }, {
-        'name': 'log in',
-        'link': 'log-in'
+        id: 4,
+        'name': 'login',
+        'link': 'login'
     }
     ];
+
+    $scope.activeView = 1;
+    
+    $scope.loadView = function (internalLinksId) {
+        $scope.activeView = internalLinksId;
+    };
+
     $scope.externalLinks = [{
         'name': '@svbtle',
         'link': 'twitter.com/svbtle'
@@ -24,48 +35,57 @@ app.controller('linksCtrl', ['$scope', function ($scope) {
 
 app.controller('articlesCtrl', ['$scope', function ($scope) {
     $scope.articles = {
-        'url': '../views/articles/articles.html'
+        'url': '/SvbtleClone/app/views/articles/articles.html'
     };
 }]);
 
 app.directive('leftNavbar', function () {
     return {
         restrict: 'E',
-        templateUrl: '../views/shared/left-navbar.html'
+        templateUrl: '/SvbtleClone/app/views/shared/left-navbar.html'
     };
 });
 
 app.directive('rightMenubar', function () {
     return {
         restrict: 'E',
-        templateUrl: '../views/shared/right-menubar.html'
+        templateUrl: '/SvbtleClone/app/views/shared/right-menubar.html'
     };
 });
 
 app.directive('articles', function () {
     return {
         restrict: 'E',
-        templateUrl: '../views/articles/articles.html'
+        templateUrl: '/SvbtleClone/app/views/articles/articles.html'
     };
 });
 
 app.directive('subArticles', function () {
     return {
         restrict: 'E',
-        templateUrl: '../views/articles/sub-articles.html'
+        templateUrl: '/SvbtleClone/app/views/articles/sub-articles.html'
     };
 });
+
+app.directive('about', function () {
+    return {
+        restrict: 'E',
+        templateUrl: '/SvbtleClone/app/views/about/about.html'
+    };
+});
+
 
 app.directive('footerLayout', function () {
     return {
         restrict: 'E',
-        templateUrl: '../views/shared/footer-layout.html'
+        templateUrl: '/SvbtleClone/app/views/shared/footer-layout.html'
     };
 });
 
 
 $('#content').bind('DOMSubtreeModified', function (e) {
     if (e.target.innerHTML.length > 0) {
+
         $(function () {
             var menu = $('#menu');
             var navBar = $('#rightNavBar');
@@ -91,6 +111,5 @@ $('#content').bind('DOMSubtreeModified', function (e) {
                 }
             });
         });
-
     }
 });
