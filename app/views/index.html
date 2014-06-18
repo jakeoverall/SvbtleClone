@@ -16,15 +16,15 @@
 
         <div class="col-lg-8 content" ng-view>
             <h1 class="pageHeader">Svbtle</h1>
-            <articles ng-show="activeView === 1"></articles>
-            <about ng-show="activeView === 2"></about>
-            <signup ng-show="activeView === 3"></signup>
-            <login ng-show="activeView === 4"></login>
+            <articles></articles>
+            <about></about>
+            <sign-up></sign-up>
+            <login></login>
         </div>
 
         <!-- Right Col Content -->
         <div class="col-lg-3">
-            <sub-articles ng-show="activeView === 1"></sub-articles>
+            <sub-articles></sub-articles>
         </div>
     </section>
     <!-- Right Nav Bar -->

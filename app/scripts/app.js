@@ -35,7 +35,7 @@ app.controller('linksCtrl', ['$scope', function ($scope) {
 
 app.controller('articlesCtrl', ['$scope', function ($scope) {
     $scope.articles = {
-        'url': '/SvbtleClone/app/views/articles/articles.html'
+        'url': '/SvbtleClone/app/views/magazine/articles/articles.html'
     };
 }]);
 
@@ -56,14 +56,14 @@ app.directive('rightMenubar', function () {
 app.directive('articles', function () {
     return {
         restrict: 'E',
-        templateUrl: '/SvbtleClone/app/views/articles/articles.html'
+        templateUrl: '/SvbtleClone/app/views/magazine/articles/articles.html'
     };
 });
 
 app.directive('subArticles', function () {
     return {
         restrict: 'E',
-        templateUrl: '/SvbtleClone/app/views/articles/sub-articles.html'
+        templateUrl: '/SvbtleClone/app/views/magazine/articles/sub-articles.html'
     };
 });
 
@@ -71,6 +71,20 @@ app.directive('about', function () {
     return {
         restrict: 'E',
         templateUrl: '/SvbtleClone/app/views/about/about.html'
+    };
+});
+
+app.directive('login', function () {
+    return {
+        restrict: 'E',
+        templateUrl: '/SvbtleClone/app/views/login/login.html'
+    };
+});
+
+app.directive('signUp', function () {
+    return {
+        restrict: 'E',
+        templateUrl: '/SvbtleClone/app/views/sign-up/sign-up.html'
     };
 });
 
