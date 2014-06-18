@@ -1,9 +1,9 @@
 ﻿<div id="rightNavBar" class="rightNavMenu">
     <button id="rightNavMenuButton" class="rightNavMenuButton"><i id="navMenuIcon" class="glyphicon glyphicon-chevron-down"></i></button>
     <div id="menu" class="hidden">
-        <ul ng-controller="linksCtrl">
+        <ul>
             <li ng-repeat="link in internalLinks">
-                <a ng-href="{{link.link}}">{{link.name}}</a>
+                <a ng-click="loadView(link.id);" ng-class="{ active:isSelected(link.id) }" ng-href="#{{link.link}}">{{link.name}}</a>
             </li>
         </ul>
     </div>

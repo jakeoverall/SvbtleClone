@@ -1,4 +1,15 @@
 ﻿<section ng-show="activeView === 4">
     <h1>Login</h1>
     <p>a form to login with</p>
+    <form class="form-horizontal">
+        <label class="label label-success" form="Email">Email Address</label>
+        <input placeholder="Email" type="email" id="Email" class="form-control" required />
+
+        <label class="label label-success" form="Password">Password</label>
+        <input placeholder="Password" type="password" id="Password" class="form-control" required min="8" />
+
+        <br />
+        <input type="submit" value="Login" class="btn btn-success" />
+        <input type="reset" value="Forgot Password" class="btn btn-success" />
+    </form>
 </section>

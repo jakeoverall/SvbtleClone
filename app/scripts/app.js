@@ -88,6 +88,13 @@ app.directive('signUp', function () {
     };
 });
 
+app.directive('signUpTips', function () {
+    return {
+        restrict: 'E',
+        templateUrl: '/SvbtleClone/app/views/sign-up/sign-up-tips.html'
+    };
+});
+
 
 app.directive('footerLayout', function () {
     return {
