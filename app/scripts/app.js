@@ -35,63 +35,63 @@ app.controller('linksCtrl', ['$scope', function ($scope) {
 
 app.controller('articlesCtrl', ['$scope', function ($scope) {
     $scope.articles = {
-        'url': '/SvbtleClone/app/views/magazine/articles/articles.html'
+        'url': '/app/views/magazine/articles/articles.html'
     };
 }]);
 
 app.directive('leftNavbar', function () {
     return {
         restrict: 'E',
-        templateUrl: '/SvbtleClone/app/views/shared/left-navbar.html'
+        templateUrl: '/app/views/shared/left-navbar.html'
     };
 });
 
 app.directive('rightMenubar', function () {
     return {
         restrict: 'E',
-        templateUrl: '/SvbtleClone/app/views/shared/right-menubar.html'
+        templateUrl: '/app/views/shared/right-menubar.html'
     };
 });
 
 app.directive('articles', function () {
     return {
         restrict: 'E',
-        templateUrl: '/SvbtleClone/app/views/magazine/articles/articles.html'
+        templateUrl: '/app/views/magazine/articles/articles.html'
     };
 });
 
 app.directive('subArticles', function () {
     return {
         restrict: 'E',
-        templateUrl: '/SvbtleClone/app/views/magazine/articles/sub-articles.html'
+        templateUrl: '/app/views/magazine/articles/sub-articles.html'
     };
 });
 
 app.directive('about', function () {
     return {
         restrict: 'E',
-        templateUrl: '/SvbtleClone/app/views/about/about.html'
+        templateUrl: '/app/views/about/about.html'
     };
 });
 
 app.directive('login', function () {
     return {
         restrict: 'E',
-        templateUrl: '/SvbtleClone/app/views/login/login.html'
+        templateUrl: '/app/views/login/login.html'
     };
 });
 
 app.directive('signUp', function () {
     return {
         restrict: 'E',
-        templateUrl: '/SvbtleClone/app/views/sign-up/sign-up.html'
+        templateUrl: '/app/views/sign-up/sign-up.html'
     };
 });
 
 app.directive('signUpTips', function () {
     return {
         restrict: 'E',
-        templateUrl: '/SvbtleClone/app/views/sign-up/sign-up-tips.html'
+        templateUrl: '/app/views/sign-up/sign-up-tips.html'
     };
 });
 
@@ -99,7 +99,7 @@ app.directive('signUpTips', function () {
 app.directive('footerLayout', function () {
     return {
         restrict: 'E',
-        templateUrl: '/SvbtleClone/app/views/shared/footer-layout.html'
+        templateUrl: '/app/views/shared/footer-layout.html'
     };
 });
 

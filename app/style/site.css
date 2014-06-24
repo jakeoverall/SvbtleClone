@@ -364,11 +364,11 @@ footer a.links {
     }
 
     footer a.links.twitterIcon {
-        background: transparent url("/SvbtleClone/media/images/twitterIcon.png") 0 -25px no-repeat;
+        background: transparent url("/media/images/twitterIcon.png") 0 -25px no-repeat;
     }
 
         footer a.links.twitterIcon:hover {
-            background: transparent url("/SvbtleClone/media/images/twitterIcon.png") 0 0 no-repeat;
+            background: transparent url("/media/images/twitterIcon.png") 0 0 no-repeat;
         }
 
 .form-control {
